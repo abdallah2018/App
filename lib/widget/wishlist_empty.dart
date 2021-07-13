@@ -18,7 +18,7 @@ class WishlistEmpty extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage('assets/images/empty-wishlist.png'),
+              image: AssetImage('assets/images/wishlist1.png'),
             ),
           ),
         ),

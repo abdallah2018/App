@@ -1,7 +1,7 @@
 import 'package:ECommerceApp/consts/colors.dart';
 import 'package:ECommerceApp/consts/my_icons.dart';
-import 'package:ECommerceApp/inner_screens/upload_product_form.dart';
-import 'package:ECommerceApp/screens/cart.dart';
+import 'package:ECommerceApp/screens/upload_product_form.dart';
+import 'package:ECommerceApp/screens/cart/cart.dart';
 import 'package:ECommerceApp/screens/feeds.dart';
 import 'package:flutter/material.dart';
 
@@ -100,14 +100,22 @@ class BackLayerMenu extends StatelessWidget {
                         color: Theme.of(context).backgroundColor,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: Container(
+                      child: CircleAvatar(
+                        backgroundImage:  AssetImage('assets/images/profile.png'),
+                        // radius: 20,
+                        minRadius: 30,
+                        maxRadius: 35,
+                      ) ,
                       //   clipBehavior: Clip.antiAlias,
                       decoration: BoxDecoration(
+
                           borderRadius: BorderRadius.circular(20.0),
-                          image: DecorationImage(
-                            image: NetworkImage(
-                                'https://cdn1.vectorstock.com/i/thumb-large/62/60/default-avatar-photo-placeholder-profile-image-vector-21666260.jpg'),
-                            fit: BoxFit.fill,
-                          )),
+                          // image: DecorationImage(
+                          //   image: NetworkImage(
+                          //       'https://cdn1.vectorstock.com/i/thumb-large/62/60/default-avatar-photo-placeholder-profile-image-vector-21666260.jpg'),
+                          //   fit: BoxFit.fill,
+                          // )),
+                         ),
                     ),
                   ),
                 ),
