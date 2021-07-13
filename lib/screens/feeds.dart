@@ -4,13 +4,14 @@ import 'package:ECommerceApp/models/product.dart';
 import 'package:ECommerceApp/provider/cart_provider.dart';
 import 'package:ECommerceApp/provider/favs_provider.dart';
 import 'package:ECommerceApp/provider/products.dart';
-import 'package:ECommerceApp/screens/wishlist.dart';
+import 'package:ECommerceApp/screens/wishlist/wishlist.dart';
 import 'package:ECommerceApp/widget/feeds_products.dart';
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'cart.dart';
+import 'cart/cart.dart';
+
 
 class Feeds extends StatelessWidget {
   static const routeName = '/Feeds';
@@ -18,6 +19,7 @@ class Feeds extends StatelessWidget {
   Widget build(BuildContext context) {
     final popular = ModalRoute.of(context).settings.arguments as String;
     final productsProvider = Provider.of<Products>(context);
+   
     List<Product> productsList = productsProvider.products;
     if (popular == 'popular') {
       productsList = productsProvider.popularProducts;
